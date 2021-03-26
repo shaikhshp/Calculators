@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Quadratic Formula | Solve Quadratics
+        </title>
+    </head>
+    <body>
+        <h1>
+            <!-- Headding -->
+            Solve Quadratics Fast And Easy.
+        </h1>
+        <p>
+            <form name="abc" >
+                <!-- Taking input from the user for the variables -->
+                <input type="number" id="a" value="0" /> x<sup>2</sup>
+                <input type="number" id="b" value="0" /> x
+                <input type="number" id="c" value="0" /> <br>
+
+                <!-- Submit button that does a specific function on click and reset button -->
+                <input type="button" onClick="start()" value="SUBMIT" />
+                <input type="reset" value="RESET" />
+            </form>
+        </p>
+
+        <!-- predeclared paragraph tags whith unique id's -->
+        <p id="28"></p>
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="3"></p>
+        <p id="4"></p>
+        <p id="5"></p>
+        <p id="6"></p>
+        <p id="7"></p>
+        <p id="8"></p>
+        <p id="9"></p>
+        <p id="10"></p>
+        <p id="11"></p>
+        <p id="12"></p>
+        <p id="13"></p>
+        <p id="14"></p>
+        <p id="15"></p>
+        <p id="16"></p>
+        <p id="17"></p>
+        <p id="18"></p>
+        <p id="19"></p>
+        <p id="20"></p>
+        <p id="21"></p>
+        <p id="22"></p>
+        <p id="23"></p>
+        <p id="24"></p>
+        <p id="25"></p>
+        <p id="26"></p>
+        <p id="27"></p>
+
+
+        <script>
+            function start(){
+                //Declaring an empty array
+                var arr = [];
+
+                //Getting user input frim html
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var c = document.getElementById("c").value;
+
+                //adding user input to array
+                arr.push(a);
+                arr.push(b);
+                arr.push(c);
+                
+                //Making a superscript 2 for x^2
+                var two = "2";
+                var result = two.sup();
+        
+                //adding text to predeclared paragraph tag using unique identifier
+                document.getElementById("28").innerHTML = arr[0] + "x" + result + " +(" + arr[1] + ")x +(" + arr[2] + ") = 0"
+                
+                //Calculating
+                quadFormula(arr[0], arr[1], arr[2]);
+            }
+            
+            function quadFormula(a, b, c){
+                //Quadratic formula = (-b +- root(b^2 - 4*a*c)) / 2*a
+
+                var x = b * b;                                      //b^2
+                var y = 4 * a * c;                                  //4*a*c
+                var z = 0 - b;                                      //-b
+                var g = 2 * a;                                      //2*a
+                var disc = x - y;                                   //discriminant = b^2 - 4*a*c
+                var aos = z / g;                                    //axis of symetry = -b / 2*a
+                var v = (a * (aos * aos)) + (b * aos) + (1 * c);    //vertex = set x as aos
+
+
+                if (disc >= 0){
+                    //discriminant is positive or 0. at least one real solution
+                    var e = Math.sqrt (disc);
+
+                    //calculating x intercepts
+                    var x1 = (z + e)/g;
+                    var x2 = (z - e)/g;
+
+                    //adding text to predeclared paragraph tag using unique identifier
+                    document.getElementById("1").innerHTML = "The x intercepts are (" + x1 + ", 0) and (" + x2 + ", 0).";
+                    document.getElementById("2").innerHTML = "The y intercept is (0, " + c + ").";
+                    document.getElementById("3").innerHTML = "The axis of symmetry is x = " + aos + ".";
+                    document.getElementById("4").innerHTML = "The vertex is (" + aos + ", " + v + ").";
+                }else{
+                    //discriminant is negative. no real solution
+                    var e = Math.sqrt (Math.abs (disc));
+
+                    //calculating imaginary x intercepts
+                    var f = z/g;
+                    var x1 = f + " + " + (e / g) + " i";
+                    var x2 = f + " - " + (e / g) + " i";
+
+                    //adding text to predeclared paragraph tag using unique identifier
+                    document.getElementById("1").innerHTML = "The x intercepts are (" + x1 + ", 0) and (" + x2 + ", 0).";
+                    document.getElementById("2").innerHTML = "The y intercept is (0, " + c + ").";
+                    document.getElementById("3").innerHTML = "The axis of symmetry is x = " + aos + ".";
+                    document.getElementById("4").innerHTML = "The vertex is (" + aos + ", " + v + ").";
+                }
+
+                //domain is always same
+                document.getElementById("5").innerHTML = "Domain: (-Infinity, Infinity)";
+                
+                
+                if (a > 0){
+                    //graph is facing up
+                    document.getElementById("6").innerHTML = "Range: (" + v + ", Infinity)";
+                }else{
+                    //graph is facing down
+                    document.getElementById("6").innerHTML = "Range: (-Infinity, " + v + ")";
+                }
+                for (var i = -10; i <= 10; i++){
+                    var h = (a * (i * i)) + (b * i) + (c * 1);
+                    var idNum = i + 17;
+                    document.getElementById(idNum).innerHTML = "When x is " + i + ", y is " + h + ".";
+                }
+            }
+        </script>
+    </body>
+
+    <!-- if js is not enabled -->
+    <noscript>
+        <p>This page requires a JavaScript-enabled browser.</p>
+    </noscript>
+
+    <!-- background image from image.freepik.com -->
+    <style>
+        html{
+            background-image: url('https://image.freepik.com/free-vector/math-background_23-2148146940.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        body {
+            margin: 0;
+            font-family: Helvetica neue, roboto;
+            background-color: #03a9f4;
+        }   
+        h1{
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Times;
+            font-style: italic;
+            color: black;
+            text-align: center;
+        }
+        p{
+            font-size: 25px;
+            font-family: Times;
+            color: black;
+            text-align: center;
+        }
+        input{
+            font-family: Times;
+            color: black;
+            background-color:#03a9f4;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</html>
