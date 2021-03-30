@@ -12,7 +12,7 @@
             Scientific Calculator
         </h1>
 
-        <button type="button" class="button4"><a href="Index.html"> Menu </a></button>
+        <input type="button"><a href="Index.html"> Menu </a></input>
 
         
         <script>
@@ -52,67 +52,121 @@
             color: black;
             text-align: center;
         }
-        input{
-            font-family: Times;
-            color: black;
-            background-color:#ff18d8;
+        input {
+            outline: 0;
+            position: relative;
+            left: 5px;
+            top: 5px;
+            border: 0;
+            color: #495069;
+            background-color: #fff;
+            border-radius: 4px;
+            width: 60px;
+            height: 50px;
+            float: left;
+            margin: 5px;
+            font-size: 20px;
+            box-shadow: 0 4px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+        }
+        input:hover {
+            border: 0 solid #000;
+            color: #495069;
+            background-color: #fff;
+            border-radius: 4px;
+            width: 60px;
+            height: 50px;
+            float: left;
+            margin: 5px;
+            font-size: 20px;
+            box-shadow: 0 4px #b0d2cf;
+        }
+        input:active {
+            top: 4px;
+            border: 0 solid #000;
+            color: #495069;
+            background-color: #fff;
+            border-radius: 4px;
+            width: 60px;
+            height: 50px;
+            float: left;
+            margin: 5px;
+            font-size: 20px;
+            box-shadow: none;
+        }
+        #display {
+            width: 265px;
+            max-width: 270px;
+            font-size: 26px;
+            text-align: right;
+            background-color: #bcbd95;
+            float: left;
+        }
+
+        #display:hover {
+            width: 270px;
+            font-size: 26px;
+            text-align: right;
+            background-color: #bcbd95;
+            box-shadow: 0 4px rgba(0,0,0,0.2);
+        }
+
+        #display:active {
+            top: 5px;
+            width: 270px;
+            font-size: 26px;
+            text-align: right;
+            background-color: #bcbd95;
+            box-shadow: 0 4px rgba(0,0,0,0.2);
+        }
+
+        .operator {
+            background-color: #cee9ea;
+            position: relative;
+        }
+
+        .operator:hover {
+            background-color: #cee9ea;
+            box-shadow: 0 4px #b0d2cf;
+        }
+
+        .operator:active {
+            top: 4px;
+            box-shadow: none;
+        }
+
+        #clear {
+            float: left;
+            position: relative;
+            display: block;
+            background-color: #ff9fa8;
+        }
+
+        #clear:hover {
+            float: left;
+            display: block;
+            background-color: #F297A0;
+            margin-bottom: 15px;
+            box-shadow: 0 4px #CC7F86;
+        }
+
+        #clear:active {
+            float: left;
+            top: 4px;
+            display: block;
+            background-color: #F297A0;
+            margin-bottom: 15px;
+            box-shadow: none;
+        }
+        table {
+            margin: auto;
+            background-color: #222;
+            width: 295px;
+            max-width: 295px;
+            height: 325px;
             text-align: center;
-            align-items: center;
-        }
-        .button {
-            border-radius: 8px;
-            color: white;
-            padding: 16px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 200px;
-            font-weight: bold;
-            font-family: Times;
-            font-style: italic;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-            cursor: pointer;
-        }
-        .button1 {
-            background-color: white;
-            color: black;
-            border: 2px solid #ff2c2c;
-        }
-        .button1:hover {
-            background-color: #ff2c2c;
-            color: white;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-        .button2 {
-            background-color: white;
-            color: black;
-            border: 2px solid #ff18d8;
-        }
-        .button2:hover {
-            background-color: #ff18d8;
-            color: white;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-        .button3 {
-            background-color: white;
-            color: black;
-            border: 2px solid #03a9f4;
-        }
-        .button3:hover {
-            background-color: #03a9f4;
-            color: white;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-        .button4 {
-            background-color: white;
-            color: black;
-            border: 2px solid #03f423;
-        }
-        .button4:hover {
-            background-color: #03f423;
-            color: white;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            border-radius: 4px;
+            padding-right: 10px;
         }
 
     </style>
