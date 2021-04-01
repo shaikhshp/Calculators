@@ -12,18 +12,20 @@
             Quadratic Formula Calculator
         </h1>
 
-        <input type="button"><a href="Index.html"> Menu </a></input>
+        <form action="Index.html">
+            <input type="submit" class="menu" value="Choose Calculator" />
+        </form>
 
         <p>
             <form name="abc" >
                 <!-- Taking input from the user for the variables -->
-                <input type="number" id="a" value="0" /> x<sup>2</sup>
-                <input type="number" id="b" value="0" /> x
-                <input type="number" id="c" value="0" /> <br>
+                <input type="number" class="quadratic" id="a" value="0" /> x<sup>2</sup>
+                <input type="number" class="quadratic" id="b" value="0" /> x
+                <input type="number" class="quadratic" id="c" value="0" /> <br>
                 
                 <!-- Submit button that does a specific function on click and reset button -->
-                <input type="button" onClick="start()" value="SUBMIT" />
-                <input type="reset" value="RESET" />
+                <input type="button" class="quadratic" onClick="start()" value="SUBMIT" />
+                <input type="reset" class="quadratic" value="RESET" />
             </form>
         </p>
 
@@ -282,6 +284,122 @@
             background-color: #F297A0;
             margin-bottom: 15px;
             box-shadow: none;
+        }
+        .standard {
+            float: left;
+            position: relative;
+            display: block;
+            background-color: #ff2c2c;
+            outline-width: medium;
+            outline-color: #911a1a;
+        }
+
+        .standard:hover {
+            float: left;
+            display: block;
+            background-color: #ff2c2c;
+            margin-bottom: 15px;
+            box-shadow: 0 4px #ff2c2cb9;
+            outline-width: medium;
+            outline-color: #911a1a;
+        }
+
+        .standard:active {
+            float: left;
+            top: 4px;
+            display: block;
+            background-color: #ff2c2c;
+            margin-bottom: 15px;
+            box-shadow: none;
+            outline-width: medium;
+            outline-color: #911a1a;
+        }
+        .scientific {
+            float: left;
+            position: relative;
+            display: block;
+            background-color: #ff18d8;
+            outline-width: medium;
+            outline-color: #a8128f;
+        }
+
+        .scientific:hover {
+            float: left;
+            display: block;
+            background-color: #ff18d8;
+            margin-bottom: 15px;
+            box-shadow: 0 4px #ff18d8b9;
+            outline-width: medium;
+            outline-color: #a8128f;
+        }
+
+        .scientific:active {
+            float: left;
+            top: 4px;
+            display: block;
+            background-color: #ff18d8;
+            margin-bottom: 15px;
+            box-shadow: none;
+            outline-width: medium;
+            outline-color: #a8128f;
+        }
+        .quadratic {
+            float: left;
+            position: relative;
+            display: block;
+            background-color: #03a9f4;
+            outline-width: medium;
+            outline-color: #0471a3;
+        }
+
+        .quadratic:hover {
+            float: left;
+            display: block;
+            background-color: #03a9f4;
+            margin-bottom: 15px;
+            box-shadow: 0 4px #03a9f4b9;
+            outline-width: medium;
+            outline-color: #0471a3;
+        }
+
+        .quadratic:active {
+            float: left;
+            top: 4px;
+            display: block;
+            background-color: #03a9f4;
+            margin-bottom: 15px;
+            box-shadow: none;
+            outline-width: medium;
+            outline-color: #0471a3;
+        }
+        .menu {
+            float: left;
+            position: relative;
+            display: block;
+            background-color: #03f423;
+            outline-width: medium;
+            outline-color: #009213;
+        }
+
+        .menu:hover {
+            float: left;
+            display: block;
+            background-color: #03f423;
+            margin-bottom: 15px;
+            box-shadow: 0 4px #03f423b9;
+            outline-width: medium;
+            outline-color: #009213;
+        }
+
+        .menu:active {
+            float: left;
+            top: 4px;
+            display: block;
+            background-color: #03f423;
+            margin-bottom: 15px;
+            box-shadow: none;
+            outline-width: medium;
+            outline-color: #009213;
         }
         table {
             margin: auto;
