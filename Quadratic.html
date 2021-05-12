@@ -8,70 +8,6 @@
 
         <link rel="stylesheet" href="Style.css">
 
-    </head>
-    <body class="qbody">
-        <h1>
-            <!-- Headding -->
-            Quadratic Formula Calculator
-        </h1>
-
-        <form action="Index.html">
-            <input type="submit" class="menu" value="Choose Calculator" />
-        </form>
-        <p>
-            <br>
-            <br>
-        </p>
-        <p>
-            <form name="abc" >
-                <!-- Taking input from the user for the variables -->
-                <p style="text-align: left;">
-                    <input style="position: static; width: auto; height: auto; float: none; display: inherit;" type="number" class="quadratic" id="a" value="0" /> x<sup>2</sup>
-                </p>
-                <p style="text-align: left;">
-                    <input style="position: static; width: auto; height: auto; float: none; display: inherit;" type="number" class="quadratic" id="b" value="0" /> x
-                </p>
-                <p style="text-align: left;">
-                    <input style="position: static; width: auto; height: auto; float: none; display: inherit;" type="number" class="quadratic" id="c" value="0" />
-                </p>
-                <br>
-                <!-- Submit button that does a specific function on click and reset button -->
-                <input type="button" class="quadratic" onClick="start()" value="SUBMIT" />
-                <input type="reset" class="quadratic" value="RESET" />
-            </form>
-        </p>
-        
-        <!-- paragraph tags whith unique id's -->
-        <p id="28"></p>
-        <p id="1"></p>
-        <p id="2"></p>
-        <p id="3"></p>
-        <p id="4"></p>
-        <p id="5"></p>
-        <p id="6"></p>
-        <p id="7"></p>
-        <p id="8"></p>
-        <p id="9"></p>
-        <p id="10"></p>
-        <p id="11"></p>
-        <p id="12"></p>
-        <p id="13"></p>
-        <p id="14"></p>
-        <p id="15"></p>
-        <p id="16"></p>
-        <p id="17"></p>
-        <p id="18"></p>
-        <p id="19"></p>
-        <p id="20"></p>
-        <p id="21"></p>
-        <p id="22"></p>
-        <p id="23"></p>
-        <p id="24"></p>
-        <p id="25"></p>
-        <p id="26"></p>
-        <p id="27"></p>
-
-
         <script>
             function start(){
                 //Declaring an empty array
@@ -150,13 +86,83 @@
                     //graph is facing down
                     document.getElementById("6").innerHTML = "Range: (-Infinity, " + v + ")";
                 }
+
+                var nums = [];
                 for (var i = -10; i <= 10; i++){
                     var h = (a * (i * i)) + (b * i) + (c * 1);
-                    var idNum = i + 17;
-                    document.getElementById(idNum).innerHTML = "When x is " + i + ", y is " + h + ".";
+                    nums.push(h)
+                }
+
+                for (var i = 0; i <= 20; i ++){
+                    idNum = i + 7;
+                    var p = i - 10;
+                    document.getElementById(idNum).innerHTML = "When x is " + p + ", y is " + nums[i] + ".";
                 }
             }
         </script>
+    </head>
+    <body class="qbody">
+        <h1>
+            <!-- Headding -->
+            Quadratic Formula Calculator
+        </h1>
+
+        <form action="Index.html">
+            <input type="submit" class="menu" value="Choose Calculator" />
+        </form>
+        <p>
+            <br>
+            <br>
+        </p>
+        <p>
+            <form name="abc" >
+                <!-- Taking input from the user for the variables -->
+                <p style="text-align: left;">
+                    <input style="position: static; width: auto; height: auto; float: none; display: inherit;" type="number" class="quadratic" id="a" value="0" /> x<sup>2</sup>
+                </p>
+                <p style="text-align: left;">
+                    <input style="position: static; width: auto; height: auto; float: none; display: inherit;" type="number" class="quadratic" id="b" value="0" /> x
+                </p>
+                <p style="text-align: left;">
+                    <input style="position: static; width: auto; height: auto; float: none; display: inherit;" type="number" class="quadratic" id="c" value="0" />
+                </p>
+                <br>
+                <!-- Submit button that does a specific function on click and reset button -->
+                <input type="button" class="quadratic" onClick="start()" value="SUBMIT" />
+                <input type="reset" class="quadratic" value="RESET" />
+            </form>
+        </p>
+        
+        <!-- paragraph tags whith unique id's -->
+        <p id="28"></p>
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="3"></p>
+        <p id="4"></p>
+        <p id="5"></p>
+        <p id="6"></p>
+        <p id="7"></p>
+        <p id="8"></p>
+        <p id="9"></p>
+        <p id="10"></p>
+        <p id="11"></p>
+        <p id="12"></p>
+        <p id="13"></p>
+        <p id="14"></p>
+        <p id="15"></p>
+        <p id="16"></p>
+        <p id="17"></p>
+        <p id="18"></p>
+        <p id="19"></p>
+        <p id="20"></p>
+        <p id="21"></p>
+        <p id="22"></p>
+        <p id="23"></p>
+        <p id="24"></p>
+        <p id="25"></p>
+        <p id="26"></p>
+        <p id="27"></p>
+
     </body>
 
     <!-- if js is not enabled -->
