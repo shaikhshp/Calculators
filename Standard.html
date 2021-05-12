@@ -6,6 +6,7 @@
             Standard Calculator | Calculators
         </title>
 
+        <!--external style sheet-->
         <link rel="stylesheet" href="Style.css">
 
     </head>
@@ -15,46 +16,53 @@
             Standard Calculator
         </h1>
 
+        <!-- button to return to menu -->
         <form action="Index.html">
             <input type="submit" class="menu" value="Choose Calculator" />
         </form>
 
+        <!-- calculator made by buttons in a table -->
         <form name="calculator">
             <table>
-               <tr>
-                  <td colspan="3">
-                     <input type="text" name="display" id="display" disabled>
+                <tr>
+                   <!-- three cell wide display, and clear button -->
+                    <td colspan="3">
+                        <input type="text" name="display" id="display" disabled>
                     
-                  </td>
-                  <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
-               </tr>
-               <tr>
-                     <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
-                     <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
-                     <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
-                     <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
-              </tr>
-              <tr>
-                     <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
-                     <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
-                     <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
-                     <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
-              </tr>
-              <tr>
-                     <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
-                     <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
-                     <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
-                     <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
-              </tr>
-              <tr>
-                     <td><input type="button" name="decimal" value="." onclick="calculator.display.value += '.'"></td>
-                     <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
-                     <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
-                     <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+                    </td>
+                    <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+                </tr>
+                <tr>
+                    <!-- buttons for 1, 2, 3, and "+"-->
+                    <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+                </tr>
+                <tr>
+                    <!-- buttons for 4, 5, 6, and "-" -->
+                    <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                    <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+                </tr>
+                <tr>
+                    <!-- buttons for 7, 8, 9, and "x" -->
+                    <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                    <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+                </tr>
+                <tr>
+                    <!-- buttons for ".", 0, "=", "/" -->
+                    <td><input type="button" name="decimal" value="." onclick="calculator.display.value += '.'"></td>
+                    <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                    <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
                
-               </tr>
+                </tr>
             </table>
-         </form>
+        </form>
     </body>
 
     <!-- if js is not enabled -->
