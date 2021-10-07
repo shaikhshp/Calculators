@@ -8,6 +8,7 @@
 
         <!-- external style sheet -->
         <link rel="stylesheet" href="Style.css">
+        <link rel="icon" href="Calculator.ico" type="image/icon type">
 
         <script>
             function start(){
@@ -38,42 +39,42 @@
             function quadFormula(a, b, c){
                 //Quadratic formula = (-b +- root(b^2 - 4*a*c)) / 2*a
 
-                var x = b * b;                                      //b^2
-                var y = 4 * a * c;                                  //4*a*c
-                var z = 0 - b;                                      //-b
-                var g = 2 * a;                                      //2*a
-                var disc = x - y;                                   //discriminant = b^2 - 4*a*c
-                var aos = z / g;                                    //axis of symetry = -b / 2*a
-                var v = (a * (aos * aos)) + (b * aos) + (1 * c);    //vertex = set x as aos
+                var b2 = b * b;                                         //b^2
+                var $4ac = 4 * a * c;                                   //4*a*c
+                var negB = 0 - b;                                       //-b
+                var $2a = 2 * a;                                        //2*a
+                var disc = b2 - $4ac;                                   //discriminant = b^2 - 4*a*c
+                var aos = negB / $2a;                                   //axis of symetry = -b / 2*a
+                var vertexY = (a * (aos * aos)) + (b * aos) + (1 * c);  //vertex = substitute aos for x
 
 
                 if (disc >= 0){
                     //discriminant is positive or 0. at least one real solution
-                    var e = Math.sqrt (disc);
+                    var sqrtDisc = Math.sqrt (disc);
 
                     //calculating x intercepts
-                    var x1 = (z + e)/g;
-                    var x2 = (z - e)/g;
+                    var x1 = (negB + sqrtDisc) / $2a;
+                    var x2 = (negB - sqrtDisc) / $2a;
 
                     //adding text to predeclared paragraph tag using unique identifier
                     document.getElementById("1").innerHTML = "The x intercepts are (" + x1 + ", 0) and (" + x2 + ", 0).";
                     document.getElementById("2").innerHTML = "The y intercept is (0, " + c + ").";
                     document.getElementById("3").innerHTML = "The axis of symmetry is x = " + aos + ".";
-                    document.getElementById("4").innerHTML = "The vertex is (" + aos + ", " + v + ").";
+                    document.getElementById("4").innerHTML = "The vertex is (" + aos + ", " + vertexY + ").";
                 }else{
                     //discriminant is negative. no real solution
-                    var e = Math.sqrt (Math.abs (disc));
+                    var sqrtAbsDisc = Math.sqrt (Math.abs (disc));
 
                     //calculating imaginary x intercepts
-                    var f = z/g;
-                    var x1 = f + " + " + (e / g) + " i";
-                    var x2 = f + " - " + (e / g) + " i";
+                    var real = negB / $2a;                              //real part
+                    var x1 = real + " + " + (sqrtAbsDisc / $2a) + " i";
+                    var x2 = real + " - " + (sqrtAbsDisc / $2a) + " i";
 
                     //adding text to predeclared paragraph tag using unique identifier
                     document.getElementById("1").innerHTML = "The x intercepts are (" + x1 + ", 0) and (" + x2 + ", 0).";
                     document.getElementById("2").innerHTML = "The y intercept is (0, " + c + ").";
                     document.getElementById("3").innerHTML = "The axis of symmetry is x = " + aos + ".";
-                    document.getElementById("4").innerHTML = "The vertex is (" + aos + ", " + v + ").";
+                    document.getElementById("4").innerHTML = "The vertex is (" + aos + ", " + vertexY + ").";
                 }
 
                 //domain is always same
@@ -82,10 +83,10 @@
                 
                 if (a > 0){
                     //graph is facing up
-                    document.getElementById("6").innerHTML = "Range: (" + v + ", Infinity)";
+                    document.getElementById("6").innerHTML = "Range: (" + vertexY + ", Infinity)";
                 }else{
                     //graph is facing down
-                    document.getElementById("6").innerHTML = "Range: (-Infinity, " + v + ")";
+                    document.getElementById("6").innerHTML = "Range: (-Infinity, " + vertexY + ")";
                 }
 
                 // declaring array for storing y values
@@ -101,8 +102,8 @@
                 // adding the y values from array to empty paragraph tags
                 for (var i = 0; i <= 20; i ++){
                     idNum = i + 7;
-                    var p = i - 10;
-                    document.getElementById(idNum).innerHTML = "When x is " + p + ", y is " + nums[i] + ".";
+                    var x = i - 10;
+                    document.getElementById(idNum).innerHTML = "When x is " + x + ", y is " + nums[i] + ".";
                 }
             }
         </script>
